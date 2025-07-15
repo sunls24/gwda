@@ -506,7 +506,11 @@ func (wd *remoteWD) TapFloat(x, y float64) (err error) {
 		"x": x,
 		"y": y,
 	}
-	_, err = wd.executePost(data, "/session", wd.sessionId, "/wda/tap/0")
+	_, err = wd.executePost(data, "/session", wd.sessionId, "/wda/tap")
+	if err != nil {
+		_, err = wd.executePost(data, "/session", wd.sessionId, "/wda/tap/0")
+		return
+	}
 	return
 }
 
@@ -913,10 +917,7 @@ func (wd *remoteWD) IsWdaHealthy() (healthy bool, err error) {
 	if rawResp, err = wd.executeGet("/health"); err != nil {
 		return false, err
 	}
-	if string(rawResp) != "I-AM-ALIVE" {
-		return false, nil
-	}
-	return true, nil
+	return strings.Contains(string(rawResp), "I-AM-ALIVE"), nil
 }
 
 func (wd *remoteWD) WdaShutdown() (err error) {
