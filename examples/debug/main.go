@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"github.com/electricbubble/gwda"
+	"github.com/sunls24/gwda"
 	"log"
 )
 

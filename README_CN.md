@@ -19,7 +19,7 @@
 > [WebDriverAgent 安装](http://leixipaopao.com/posts/0005-wda-appium-installing/)
 
 ```shell script
-go get github.com/electricbubble/gwda
+go get -u github.com/sunls24/gwda@master
 ```
 
 ## 快速上手

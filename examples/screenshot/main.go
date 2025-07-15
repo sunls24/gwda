@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/electricbubble/gwda"
+	"github.com/sunls24/gwda"
 	"image"
 	"log"
 )

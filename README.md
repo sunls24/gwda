@@ -15,7 +15,7 @@ English | [🇨🇳中文](README_CN.md)
 > First, install WebDriverAgent for iOS devices
 
 ```shell script
-go get github.com/electricbubble/gwda
+go get -u github.com/sunls24/gwda@master
 ```
 
 ## QuickStart

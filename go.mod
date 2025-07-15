@@ -1,4 +1,4 @@
-module github.com/electricbubble/gwda
+module github.com/sunls24/gwda
 
 go 1.16
 
